@@ -1,7 +1,7 @@
-import app from './src/app.js';
+import app from './src/app.js'
 
 //server setup
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 3000
 
-app.listen(port);
-console.log('Server listening on:', port);
+app.listen(port)
+console.log('Server listening on:', port)

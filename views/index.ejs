@@ -2,55 +2,29 @@
     <head>
         <%- include('./partials/head'); %>
     </head>
-    <body class="text-white bg-light">
+    <body class="text-secondary bg-dark">
         <!-- Header -->
-        <div
-            class="fixed-top text-center py-3 alt-bg" 
-            "
-        >
-        <nav
-        class="navbar navbar-expand-lg"
-        style="padding-left: 30px; padding-right: 30px"
-    >
-        <a class="navbar-brand text-white" href="/">DN Landing</a>
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link text-white" href="/">Home</a>
-            </li>       
-            <li class="nav-item">
-                <a class="nav-link text-white" href="/about">About</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link text-white" href="/about">View All Names</a>
-            </li>
-        </ul>
-    </nav>
-        </div>
-
+        <%- include('./partials/header', { url: url}); %>
+       
         <!-- Main content -->
+        <%- include('./partials/body', { url: url}); %>
         <div class="container">
-            <div class="row h-100">
+            <div class="row h-90">
                 <div
                     class="border-lg border-white col-6 d-flex justify-content-around mx-auto my-auto"
                 >
                     <div class="t-prime">
                         <div class="card-body text-center">
                             <!-- Left column content -->
-                            <h1 style="font-size:4em;">DNLanding.com</h1>
-                            <p style="font-size:2em;">This Domain is Forsale</p>
-                            <h2 style="font-size:3em;">$2500</h2>
-                            <button class="btn btn-lg b-prime">
-                                Buy Now
-                            </button>
+                            <h1 style="font-size: 4em"><%=url%></h1>
+                            <p style="font-size: 2em">This Domain is Forsale</p>
+                            <h2 style="font-size: 3em">$<%=price%>.00</h2>
+                            <button class="btn btn-lg b-prime">Buy Now</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-5 px-5 mx-auto my-auto">
-                    <div
-                        class="card rounded-100 shadow alt-bg"
-                        
-                    >
+                    <div class="card rounded-100 shadow alt-bg">
                         <div class="card-body my-5 text-white">
                             <!-- Right column content -->
                             <form>
@@ -66,7 +40,7 @@
                                         id="exampleInputEmail1"
                                         aria-describedby="emailHelp"
                                     />
-                               
+
                                     <div class="mb-3 form-check">
                                         <input
                                             type="checkbox"
@@ -79,7 +53,6 @@
                                             >Hide Real Email Address</label
                                         >
                                     </div>
-                                
                                 </div>
                                 <div class="mb-3">
                                     <label
@@ -106,14 +79,23 @@
                                     />
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Message</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-                                  </div>
-                                  <br>
-                                  <div class="d-flex justify-content-around">
-                                <button type="submit" class="btn btn-primary justify-content-around">
-                                    Submit
-                                </button>
+                                    <label for="exampleFormControlTextarea1"
+                                        >Message</label
+                                    >
+                                    <textarea
+                                        class="form-control"
+                                        id="exampleFormControlTextarea1"
+                                        rows="5"
+                                    ></textarea>
+                                </div>
+                                <br />
+                                <div class="d-flex justify-content-around">
+                                    <button
+                                        type="submit"
+                                        class="btn btn-primary justify-content-around"
+                                    >
+                                        Submit
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -123,9 +105,7 @@
         </div>
 
         <!-- Footer -->
-        <div class="fixed-bottom alt-bg text-center py-3">
-            <h1 class="text-white">Footer</h1>
-        </div>
+        <%- include('./partials/footer', { url: url}); %>
     </body>
 </html>
 <style>
