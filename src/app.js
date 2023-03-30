@@ -45,7 +45,7 @@ app.get('/', async (req, res) => {
     // }
     console.log(domainData)
     if (domainData) {
-        res.render('index.ejs', { domainData: domainData })
+        res.render('index.ejs', { ...domainData })
     }
 })
 
